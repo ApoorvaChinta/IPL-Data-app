@@ -11,7 +11,7 @@ import gunicorn
 import dash_table
 
 #Importing Csv File
-path = "/home/imman/Documents/Guvi Tasks/Plotly Tasks/resources/IPL_Matches.csv"
+path = "https://raw.githubusercontent.com/immangeek/IPL-Data-app/master/resources/IPL_Matches.csv"
 df = pd.read_csv(path)
 
 #Dropping unneccesaries
