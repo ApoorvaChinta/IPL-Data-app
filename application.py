@@ -83,7 +83,7 @@ top_ten_players = best_player_df.iloc[0:10]
 #Most win by Runs
 most_runs_win = df[df['result']=='runs']
 most_runs_win = most_runs_win.sort_values(by='result_margin',ascending=False)
-most_runs_win = most_runs_win.iloc[0:10,[10,12,14 ]]
+most_runs_win = most_runs_win.iloc[0:3,[10,12,14 ]]
 
 #Most Win by Wickets
 most_wickets_win = df[df['result']=='wickets']
@@ -98,7 +98,7 @@ fig_bestteam = px.bar(
 fig_bestteam.update_layout(xaxis_tickangle=-90)
 
 fig_most_runs = px.bar(
-    most_runs_win,x='result_margin',y='winner',orientation='h'
+    most_runs_win,x='winner',y='result_margin',orientation='v'
 )
 
 
@@ -106,7 +106,7 @@ fig_most_runs = px.bar(
 
 
 
-#Heroku App
+#Heroku App Intializing
 
 
 
